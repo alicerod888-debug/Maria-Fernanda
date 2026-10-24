@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maria Fernanda BISTRÔ — Itaberaba, BA</title>
+<meta name="description" content="Cardápio digital e pedidos pelo WhatsApp do Maria Fernanda BISTRÔ, em Itaberaba - BA.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="intro"><video id="intro-video" src="assets/abertura.mp4" muted playsinline autoplay></video><button id="intro-pular" class="btn ghost">Pular</button></div>
+
+<header class="topo">
+  <a href="#inicio" class="marca"><img src="assets/logo.png" alt="Maria Fernanda Bistrô"></a>
+  <nav aria-label="Principal">
+    <a href="#cardapio">Cardápio</a><a href="#contato">Contato</a>
+    <a data-ig target="_blank" rel="noopener" aria-label="Instagram" class="ico">IG</a>
+    <button data-abrir-carrinho class="btn pri">Pedido <span id="badge">0</span></button>
+  </nav>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <img class="logo-grande" src="assets/logo.png" alt="Maria Fernanda Bistrô">
+  <p>Um bistrô para saborear com calma, no coração de Itaberaba.</p>
+  <div class="botoes"><a href="#cardapio" class="btn pri">Explorar Cardápio</a><button data-abrir-carrinho class="btn ghost">Fazer Pedido</button></div>
+</section>
+
+<section id="cardapio" class="secao">
+  <h2>Cardápio</h2>
+  <nav id="cat-nav" class="chips" aria-label="Categorias"></nav>
+  <div id="cardapio-lista"></div>
+</section>
+
+<section id="contato" class="secao contato">
+  <h2>Contato e Localização</h2>
+  <ul>
+    <li><a data-wa target="_blank" rel="noopener">WhatsApp para pedidos</a></li>
+    <li><a data-tel>+55 75 99282-3113</a></li>
+    <li><a data-ig target="_blank" rel="noopener">@mariafernandabistro</a></li>
+    <li>Praça J. J. Seabra, 246 - Centro, Itaberaba - BA, 46880-000</li>
+  </ul>
+  <a data-maps target="_blank" rel="noopener" class="btn pri">Como chegar</a>
+</section>
+</main>
+
+<footer class="rodape">
+  <img src="assets/logo.png" alt="Maria Fernanda Bistrô">
+  <p><a data-ig target="_blank" rel="noopener">@mariafernandabistro</a> · <a data-tel>+55 75 99282-3113</a></p>
+  <p>Praça J. J. Seabra, 246 - Centro, Itaberaba - BA, 46880-000 · <a data-maps target="_blank" rel="noopener">Ver no Google Maps</a></p>
+</footer>
+
+<a data-wa target="_blank" rel="noopener" class="flutuante" aria-label="Conversar no WhatsApp">WhatsApp</a>
+
+<aside id="carrinho" aria-hidden="true" aria-label="Seu pedido">
+  <div class="cab"><h2>Seu pedido</h2><button id="carrinho-fechar" aria-label="Fechar">✕</button></div>
+  <div id="carrinho-itens"></div>
+  <label for="obs">Observações do pedido</label>
+  <textarea id="obs" rows="3" placeholder="Ex.: sem cebola, ponto da carne..."></textarea>
+  <p class="tot">Total: <strong id="total">—</strong></p>
+  <a id="finalizar" class="btn pri" target="_blank" rel="noopener">Finalizar pelo WhatsApp</a>
+  <small>O pedido é enviado ao restaurante, que confirmará o atendimento.</small>
+</aside>
+
+<dialog id="pers"><form>
+  <h3>Escolha 2 acompanhamentos</h3><p id="pers-nome"></p>
+  <div id="pers-lista"></div><p id="pers-aviso" aria-live="polite"></p>
+  <div class="botoes"><button id="pers-cancel" type="button" class="btn ghost">Cancelar</button><button id="pers-ok" class="btn pri" disabled>Adicionar</button></div>
+</form></dialog>
+<div id="toast" role="status"></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
